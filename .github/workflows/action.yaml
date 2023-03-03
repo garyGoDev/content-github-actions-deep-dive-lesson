@@ -91,7 +91,7 @@ jobs:
               --role arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/${{ vars.FUNCTION_ROLE }}
       - name: Invoke test function 
         run: |
-            aws lambda invoke --function-name test-function-${{ matrix.input }} \
+            aws lambda invoke --function-name test-${{ matrix.input }} \
               --payload $(echo "{\"input\": \"${{ matrix.input }}\"}" | base64) \
               --output json out 
             if grep -q "Error" out; then
