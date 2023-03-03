@@ -124,6 +124,8 @@ jobs:
 
   docs:
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
     needs: deploy
     steps:
       - name: Check out code
