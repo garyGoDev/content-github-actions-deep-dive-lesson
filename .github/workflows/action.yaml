@@ -125,7 +125,7 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       pages: write
     needs: deploy
     steps:
